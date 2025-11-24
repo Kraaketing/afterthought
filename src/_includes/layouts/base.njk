@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta
       name="description"
       content="description of page here"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/monogramdot.svg">
+/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="png/favicon.png">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css"/>
   </head>
   <body class="c-screen-height c-flex c-flex-center" id="top">
+      {# {% if content %}
+        <section>
+          {{ content | safe }}
+        </section>
+      {% endif %} #}
     {% include "components/header.njk" %}
-      <main>
-        {% if content %}
-          <section>
-              {{ content | safe }} 
-          </section>
-        {% endif %}
 
-        {% if blocks %} {% for block in blocks %} 
+      {% if blocks %}
+        {% for block in blocks %}
 
-        {% if block.type == "hero" %}
-        {% include "blocks/hero.njk" %} 
+          {% if block.type == "hero" %}
+            {% include "blocks/hero.njk" %}
 
-        {% elif block.type == "intro" %} 
-        {% include "blocks/intro.njk" %} 
+          {% elif block.type == "intro" %}
+            {% include "blocks/intro.njk" %}
 
-        {% elif block.type == "test-block" %} 
-        {% include "blocks/test-block.njk" %} 
+          {% elif block.type == "test-block" %}
+            {% include "blocks/test-block.njk" %}
 
-        {% endif %} 
+          {% endif %}
         {% endfor %}
-        {% endif %}
-      </main>
+      {% endif %}
+    </main>
     {% include "components/footer.njk" %}
+    <video autoplay muted loop id="myVideo">
+      <source src="background-big.mp4" type="video/mp4">
+    </video>
+    <main>
   </body>
 </html>

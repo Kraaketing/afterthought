@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
+Disallow: /*.json$
 
-Host: https://domain.com
-Sitemap: https://domain.com/sitemap.xml
+Host: https://afterthought.space
+Sitemap: https://afterthought.space/sitemap.xml
