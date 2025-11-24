@@ -1,0 +1,9 @@
+<section class="c-margin-center test-block" aria-labelledby=“id-name”>
+   {% if block.image %}
+    <img src="{{ block.image }}" alt="{{ block['image-alt'] or 'Image' }}" class="round-image">
+  {% endif %}
+  {% if block.header %}
+    <h3 class="block-image" id="id-name">
+  {% endif %}
+ {{ block["rich-text"] | markdown | safe }}
+</section>

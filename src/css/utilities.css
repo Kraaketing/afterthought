@@ -1,0 +1,28 @@
+/* UTILITIES */
+:root {
+  --primary: oklch(0.661 0.1708 174.11);
+  --primary--dark: oklch(0.5322 0.1371 174.11);
+  --primary--black: oklch(0.2658 0.0821 160.09);
+}
+
+p, ul, ol , a, span, details, label, input, textarea {
+  font-size: clamp(1.5rem, 1rem + 2vw, 1.8rem);
+}
+
+.u-font-small {
+  font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
+h2, h3, .u-font-big {
+  font-size: clamp(1.8rem, 1rem + 4vw, 2.2rem);
+}
+
+h1, .font-huge {
+  font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
+}
+
+.round-image {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}

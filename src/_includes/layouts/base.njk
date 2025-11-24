@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="description of page here"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/monogramdot.svg">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="c-screen-height c-flex c-flex-center" id="top">
+    {% include "components/header.njk" %}
+      <main>
+        {% if content %}
+          <section>
+              {{ content | safe }} 
+          </section>
+        {% endif %}
+
+        {% if blocks %} {% for block in blocks %} 
+
+        {% if block.type == "hero" %}
+        {% include "blocks/hero.njk" %} 
+
+        {% elif block.type == "intro" %} 
+        {% include "blocks/intro.njk" %} 
+
+        {% elif block.type == "test-block" %} 
+        {% include "blocks/test-block.njk" %} 
+
+        {% endif %} 
+        {% endfor %}
+        {% endif %}
+      </main>
+    {% include "components/footer.njk" %}
+  </body>
+</html>
