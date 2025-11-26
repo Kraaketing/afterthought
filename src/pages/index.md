@@ -9,4 +9,3 @@ blocks:
 #      # header
 #      rich text
 ---
-markup text

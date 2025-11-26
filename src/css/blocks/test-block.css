@@ -1,9 +1,0 @@
-
-.test-block {
-    min-height: 11rem;
-    width: 50%;
-    background-color: var(--primary);
-    img {
-        width: 100%;
-    }
-}

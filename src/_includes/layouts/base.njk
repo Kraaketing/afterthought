@@ -11,15 +11,17 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css"/>
   </head>
-  <body class="c-screen-height c-flex c-flex-center" id="top">
-      {# {% if content %}
+
+  <body class="base-body">
+    {% include "components/header.njk" %}
+    <main>
+      {% if content %}
         <section>
           {{ content | safe }}
         </section>
-      {% endif %} #}
-    {% include "components/header.njk" %}
+      {% endif %}
 
-      {% if blocks %}
+      {# {% if blocks %}
         {% for block in blocks %}
 
           {% if block.type == "hero" %}
@@ -33,12 +35,13 @@
 
           {% endif %}
         {% endfor %}
-      {% endif %}
+      {% endif %} #}
+      
     </main>
-    {% include "components/footer.njk" %}
-    <video autoplay muted loop id="myVideo">
+    {# {% include "components/footer.njk" %} #}
+    {# <video autoplay muted loop id="myVideo">
       <source src="background.mp4" type="video/mp4">
-    </video>
-    <main>
+    </video> #}
   </body>
+  
 </html>
