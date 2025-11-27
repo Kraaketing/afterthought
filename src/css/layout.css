@@ -28,10 +28,14 @@ body {
       padding-top: 30vh;
       a,
       span {
-        /* color: var(--green); */
+        /* color: var(--grey); */
         font-weight: bold;
         text-wrap: nowrap;
         text-decoration: none;
+        /* animation: text-color-change 60s infinite; */
+      }
+      a.active {
+        color: var(--grey);
       }
     }
   }
@@ -44,13 +48,23 @@ body {
 }
 @keyframes color-change {
   0% { fill: var(--black); }
-  10% { fill: var(--black); }
-  20% { fill: var(--purple); }
-  30% { fill: var(--grey); }
-  50% { fill: var(--grey); }
-  60% { fill: var(--green); }
-  90% { fill: var(--black); }
+  35% { fill: var(--black); }
+  40% { fill: var(--purple); }
+  45% { fill: var(--grey); }
+  85% { fill: var(--grey); }
+  90% { fill: var(--green); }
+  95% { fill: var(--black); }
   100% { fill: var(--black); }
+}
+@keyframes text-color-change {
+  0% { color: var(--black); }
+  38% { color: var(--black); }
+  43% { color: var(--purple); }
+  48% { color: var(--grey); }
+  88% { color: var(--grey); }
+  93% { color: var(--green); }
+  98% { color: var(--black); }
+  100% { color: var(--black); }
 }
 section {
   display: none;

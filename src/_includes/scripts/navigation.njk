@@ -11,10 +11,14 @@
                     .classList
                     .remove('active');
             });
+                    navLinks.forEach(navLink => {
+            navLink.classList.remove('active');
+        });
             const targetSection = document.getElementById(targetId);
             targetSection
                 .classList
                 .add('active');
+                link.classList.add('active');
         });
     });
 </script>
