@@ -1,0 +1,20 @@
+<script>
+    const navLinks = document.querySelectorAll('a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            sections.forEach(section => {
+                section
+                    .classList
+                    .remove('active');
+            });
+            const targetSection = document.getElementById(targetId);
+            targetSection
+                .classList
+                .add('active');
+        });
+    });
+</script>

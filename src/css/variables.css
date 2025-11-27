@@ -1,27 +1,32 @@
 :root {
-  --primary: oklch(0.661 0.1708 174.11);
-  --primary--dark: oklch(0.5322 0.1371 174.11);
-  --primary--black: oklch(0.2658 0.0821 160.09);
+  --grey: #dbd8d7;
+  --purple: #b491aa;
+  --green: #afaf3c;
+  --black: #23282d;
 }
 
-/* TEXT STYLING */
-p, ul, ol , a, span, details, label, input, textarea {
-  font-size: clamp(1.5rem, 1rem + 2vw, 1.8rem);
+.grey {
+    color: var(--grey);
 }
 
-.u-font-small {
-  font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+.purple {
+    color: var(--purple);
 }
 
-h2, h3, .u-font-big {
-  font-size: clamp(1.8rem, 1rem + 4vw, 2.2rem);
+.black {
+    color: var(--black);
 }
 
-h1, .font-huge {
-  font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
+.green {
+    color: var(--green);
 }
 
-.logofont {
-    font-family: logo-font;
-    text-decoration: none;
-}
+/* 
+Logotype = Abraham-Regular
+Headline = Milligram Variable Bold
+Subline = Milligram Variable Bold
+“Quote” = Milligram Italic Variable
+Header = Milligram Variable Medium
+body = Milligram Variable Book
+*footer = Milligram Variable Thin 
+*/

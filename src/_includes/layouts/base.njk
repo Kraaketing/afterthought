@@ -14,14 +14,32 @@
 
   <body class="base-body">
     {% include "components/header.njk" %}
-    <main>
-      {% if content %}
-        <section>
-          {{ content | safe }}
-        </section>
-      {% endif %}
+<main>
+{# {% if content %}
+<section>
+{{ content | safe }}
+</section>
+{% endif %} #}
+<section id="who-we-are">
+<h2>Section 1</h2>
+<p>This is the content of section 1.</p>
+</section>
+<section id="what-we-do">
+<h2>Section 2</h2>
+<p>This is the content of section 2.</p>
+</section>
+<section id="what-weve-done">
+<h2>Section 1</h2>
+<p>This is the content of section 1.</p>
+</section>
+<section id="contact">
+<h2>Section 2</h2>
+<p>This is the content of section 2.</p>
+</section>
+    {% include "scripts/navigation.njk" %}
 
-      {# {% if blocks %}
+
+{# {% if blocks %}
         {% for block in blocks %}
 
           {% if block.type == "hero" %}
@@ -36,12 +54,12 @@
           {% endif %}
         {% endfor %}
       {% endif %} #}
-      
-    </main>
-    {# {% include "components/footer.njk" %} #}
-    {# <video autoplay muted loop id="myVideo">
-      <source src="background.mp4" type="video/mp4">
-    </video> #}
-  </body>
-  
+
+</main>
+{# {% include "components/footer.njk" %} #}
+<video autoplay playsinline muted preload="auto" loop id="background" poster="webp/background-static.webp">
+<source src="background.mp4" type="video/mp4">
+</video>
+</body>
+
 </html>

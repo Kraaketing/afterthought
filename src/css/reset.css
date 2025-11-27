@@ -1,6 +1,44 @@
 @font-face {
-  font-family: 'logo-font';
-  src: url('/fonts/abraham.woff2') format('woff2');
+  font-family: 'milligram';
+  src: url('/fonts/milligram-thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'milligram';
+  src: url('/fonts/milligram-text-book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'milligram';
+  src: url('/fonts/milligram-text-book-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'milligram';
+  src: url('/fonts/milligram-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'milligram';
+  src: url('/fonts/milligram-medium-italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'milligram';
+  src: url('/fonts/milligram-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -13,7 +51,7 @@
   outline: 0;
   font-size: 100%;
   line-height: 1.55;
-  font-family: "font-name", "Trebuchet MS", Arial;
+  font-family: "milligram", "Trebuchet MS", Arial;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
@@ -22,4 +60,45 @@ h1,
 h2,
 h3 {
   text-wrap: balance;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+blockquote, q {
+  font-weight: 400;
+  font-style: italic;
+}
+
+body, p, span, li, td, th {
+  font-weight: 400;
+}
+
+footer {
+  font-weight: 100;
+}
+
+p, ul, ol , a, span, details, label, input, textarea {
+  font-size: clamp(1.5rem, 1rem + 2vw, 1.8rem);
+}
+
+.u-font-small {
+  font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
+h2, h3, .u-font-big {
+  font-size: clamp(1.8rem, 1rem + 4vw, 2.2rem);
+}
+
+h1, .font-huge {
+  font-size: clamp(2rem, 2rem + 4vw, 6.2rem);
+}
+
+h1, h2, h3, h4, p, a, span {
+    color: var(--black);
 }
